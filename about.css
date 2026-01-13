@@ -1,0 +1,343 @@
+@import url("index.css");
+
+/* ================= GLOBAL FX ================= */
+.about-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW ORBS (BACKGROUND MAGIC) */
+.about-page::before,
+.about-page::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(143,107,255,0.35), transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.about-page::before {
+  top: -150px;
+  left: -150px;
+}
+
+.about-page::after {
+  bottom: -200px;
+  right: -150px;
+}
+
+@import url("index.css");
+
+/* ================= ABOUT HERO ================= */
+.about-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  background: radial-gradient(circle at top, #1a1440, #0b0b12);
+}
+
+.about-hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-hero-content h1 {
+  font-size: 58px;
+  margin-bottom: 22px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFade 1s ease forwards;
+}
+
+.about-hero-content p {
+  font-size: 17px;
+  color: #cfcfe6;
+  line-height: 1.7;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFade 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* HERO ANIMATION */
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 44px;
+  }
+}
+
+
+/* ================= ABOUT INTRO ================= */
+.about-intro {
+  padding: 140px 80px;
+  text-align: center;
+  background: #0e0e18;
+}
+
+.about-intro h2 {
+  font-size: 42px;
+  margin-bottom: 70px;
+}
+
+/* GRID */
+.about-intro-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.about-intro-card {
+  padding: 42px 36px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(143, 107, 255, 0.18);
+  transition: 0.35s ease;
+}
+
+.about-intro-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.about-intro-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfe6;
+}
+
+/* HOVER (SUBTLE, PROFESSIONAL) */
+.about-intro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(143, 107, 255, 0.28);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================= MISSION & VISION ================= */
+.about-split {
+  padding: 160px 80px;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.about-split-card {
+  padding: 60px 50px;
+  border-radius: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(143, 107, 255, 0.35),
+    rgba(30, 30, 60, 0.95)
+  );
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: 0.35s ease;
+}
+
+.about-split-card h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-split-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cfcfe6;
+}
+
+/* SUBTLE HOVER */
+.about-split-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px rgba(143, 107, 255, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= ABOUT STATS ================= */
+.about-stats {
+  padding: 160px 80px;
+  background: radial-gradient(circle at top, #15152a, #0b0b12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.about-stat {
+  padding: 50px 30px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(143, 107, 255, 0.18);
+  transition: 0.35s ease;
+}
+
+.about-stat h3 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #8f6bff;
+  margin-bottom: 12px;
+}
+
+.about-stat span {
+  font-size: 14px;
+  color: #cfcfe6;
+  letter-spacing: 0.5px;
+}
+
+/* HOVER (SUBTLE) */
+.about-stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 55px rgba(143, 107, 255, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================= ABOUT PROCESS ================= */
+.about-process {
+  padding: 160px 80px;
+  text-align: center;
+  background: #0e0e18;
+}
+
+.about-process h2 {
+  font-size: 42px;
+  margin-bottom: 70px;
+}
+
+/* GRID */
+.about-process-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+/* CARD */
+.about-process-card {
+  padding: 40px 34px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(143, 107, 255, 0.18);
+  transition: 0.35s ease;
+  text-align: left;
+}
+
+.about-process-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #8f6bff;
+}
+
+.about-process-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfe6;
+}
+
+/* HOVER */
+.about-process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(143, 107, 255, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================= ABOUT CTA ================= */
+.about-cta {
+  padding: 180px 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #0b0b12, #12122a);
+}
+
+.about-cta h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.about-cta p {
+  font-size: 16px;
+  color: #cfcfe6;
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.7;
+}
+/* CTA BUTTONS */
+.about-cta-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-cta h2 {
+    font-size: 34px;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-cards,
+  .about-split,
+  .about-stats,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}

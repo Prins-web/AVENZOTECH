@@ -1,0 +1,73 @@
+/* ================= MOBILE ONLY FIX ================= */
+@media (max-width: 768px) {
+
+  /* RESET MOBILE CHAOS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 70px 20px !important;
+  }
+
+  /* HERO */
+  .hero,
+  .about-hero,
+  .services-hero,
+  .projects-hero,
+  .contact-hero {
+    min-height: auto !important;
+    padding-top: 120px !important;
+    padding-bottom: 60px !important;
+    text-align: center;
+  }
+
+  /* GRIDS → SINGLE COLUMN */
+  .about-container,
+  .about-intro-grid,
+  .services-grid,
+  .projects-grid,
+  .why-grid,
+  .contact-inner,
+  .service-detail-grid,
+  .project-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* CARDS */
+  .about-box,
+  .about-intro-card,
+  .service-card,
+  .project-card,
+  .why-card,
+  .service-detail-card,
+  .project-showcase-card {
+    padding: 20px !important;
+    border-radius: 16px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+}
